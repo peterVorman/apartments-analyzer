@@ -1,0 +1,16 @@
+language: python
+python:
+  - "3.4"
+  - "3.5"
+# command to install dependencies
+install: 
+  pip install -r requirements.txt
+# command to run tests
+script: bash ./run_tests.sh
+
+notifications:
+  email:
+    recipients:
+      - peter.vorman@gmail.com
+    on_success: [always|never|change] # default: change
+    on_failure: [always|never|change] # default: always
