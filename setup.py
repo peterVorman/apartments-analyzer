@@ -1,4 +1,4 @@
-from distutils.core import setup
+from setuptools import setup
 
 setup(
     name='apartments-analyzer',
@@ -14,5 +14,10 @@ setup(
         'motor==1.1',
         'newrelic==2.74.0.54',
         'beautifulsoup4==4.5.3'
-    ]
+    ],
+    setup_requires=['pytest-runner'],
+    tests_require=['pytest==3.0.5',
+                   'pytest-asyncio==0.5.0',
+                   'pytest-cov==2.4.0',
+                   'pytest-flake8==0.8.1'],
 )

@@ -1,4 +1,0 @@
-pytest==3.0.4
-pytest-asyncio==0.5.0
-pytest-cov==2.4.0
-pytest-flake8==0.8.1

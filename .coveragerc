@@ -1,7 +1,6 @@
 [run]
 branch = True
-source =
-        analyzer
+source = analyzer
 omit =
         */tests/*
         */__init__.py
