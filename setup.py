@@ -12,6 +12,7 @@ setup(
     install_requires=[
         'aiohttp==1.1.6',
         'motor==1.1',
-        'newrelic==2.74.0.54'
+        'newrelic==2.74.0.54',
+        'beautifulsoup4==4.5.3'
     ]
 )
