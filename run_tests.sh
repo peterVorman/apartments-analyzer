@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
-
-pytest -v --color=yes ./tests/
+pip install -r ./tests/requirements.txt
+pytest -v --color=yes --flake8 ./tests/
+coverage run --source=analyzer tests

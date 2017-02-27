@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+  mongodb:
+    image: mongo:3.4
+    volumes:
+      - ./mongo_data:/data/db
+    ports:
+      - "27017:27017"
+
+  mongodbclient:
+    image: mongoclient/mongoclient:1.4.0
+    ports:
+      - "3000:3000"
+    links:
+      - mongodb:mongodb

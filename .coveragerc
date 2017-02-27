@@ -1,0 +1,14 @@
+[run]
+branch = True
+source =
+        analyzer
+omit =
+        */tests/*
+        */__init__.py
+
+[report]
+skip_covered = False
+
+[html]
+directory = html_report
+title = Coverage
