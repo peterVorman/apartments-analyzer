@@ -10,13 +10,14 @@ setup(
     author_email='peter.vorman@gmail.com',
     description='',
     install_requires=[
-        'aiohttp==1.1.6',
+        'pip==9.0.1',
+        'setuptools==36.4.0',
+        'aiohttp==2.2.5',
         'motor==1.1',
-        'newrelic==2.74.0.54',
-        'beautifulsoup4==4.5.3'
+        'beautifulsoup4==4.6.0',
     ],
     setup_requires=['pytest-runner'],
-    tests_require=['pytest==3.0.5',
+    tests_require=['pytest==3.2.2',
                    'pytest-asyncio==0.5.0',
                    'pytest-cov==2.4.0',
                    'pytest-flake8==0.8.1'],

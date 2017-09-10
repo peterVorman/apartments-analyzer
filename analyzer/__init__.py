@@ -1,13 +1,8 @@
 import asyncio
 import logging
 
-import newrelic.agent
-import os
-
 from analyzer.services import OLXApartmentsParsingService
 
-newrelic_conf = os.path.normpath(os.getcwd() + "/newrelic.ini")
-newrelic.agent.initialize(config_file=newrelic_conf, environment="development")
 
 loop = asyncio.get_event_loop()
 
