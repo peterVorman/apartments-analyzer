@@ -99,11 +99,11 @@ class OLXApartmentsParsingService:
         self.loop = loop
         self.base_url = base_url
         self.search = OLXSearchUrlBuilder(base_url=self.base_url)
-        self.offers_storage = OfferStorage(host="localhost",
+        self.offers_storage = OfferStorage(host="mongodb",
                                            port=27017,
                                            db_name="default",
                                            loop=self.loop)
-        self.phones_storage = PhoneStorage(host="localhost",
+        self.phones_storage = PhoneStorage(host="mongodb",
                                            port=27017,
                                            db_name="default",
                                            loop=self.loop)

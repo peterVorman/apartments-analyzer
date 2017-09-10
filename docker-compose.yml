@@ -1,16 +1,47 @@
-version: '2'
+version: "3"
 
 services:
+  dev:
+    container_name: dev_container
+    image: dev_container
+    build:
+      context: ./dockerfiles/dev_container
+    volumes:
+      - ./:/opt
+    depends_on:
+      - mongodb
+    links:
+      - mongodb
+    networks:
+     - front
+     - backend
+     - db
+    ports:
+      - "222:22"
+
   mongodb:
-    image: mongo:3.4
+    container_name: mongodb
+    image: mongo:latest
     volumes:
       - ./mongo_data:/data/db
+    networks:
+     - db
     ports:
       - "27017:27017"
 
   mongodbclient:
-    image: mongoclient/mongoclient:1.4.0
+    container_name: mongodbclient
+    image: mongoclient/mongoclient:latest
+    networks:
+     - front
+     - backend
+     - db
     ports:
       - "3000:3000"
     links:
       - mongodb:mongodb
+
+networks:
+  front:
+  backend:
+  db:
