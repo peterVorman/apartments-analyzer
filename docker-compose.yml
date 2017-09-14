@@ -4,6 +4,9 @@ services:
   dev:
     container_name: dev_container
     image: dev_container
+    working_dir: /opt
+    environment:
+      - COVERALLS_REPO_TOKEN=UdEu7TxCBgJxLNLCy3T1GzTBRwuopI473
     build:
       context: ./dockerfiles/dev_container
     volumes:

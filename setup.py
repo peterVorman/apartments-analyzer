@@ -17,8 +17,10 @@ setup(
         'beautifulsoup4==4.6.0',
     ],
     setup_requires=['pytest-runner'],
-    tests_require=['pytest==3.2.2',
-                   'pytest-asyncio==0.5.0',
-                   'pytest-cov==2.4.0',
-                   'pytest-flake8==0.8.1'],
+    tests_require=[
+        'pytest==3.2.2',
+        'pytest-asyncio==0.7.0',
+        'pytest-cov',
+        'pytest-flake8',
+    ],
 )
